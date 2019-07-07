@@ -40,3 +40,65 @@
     bottom: 0.6em;
     transition: bottom 0.3s ease-in-out, width 0.3s ease-in-out;
 }
+
+#site-title{
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0;
+    text-transform: uppercase;
+    color: #e7e7e7;
+    letter-spacing: 0.1em;
+}
+
+#site-title a{
+    text-decoration: none;
+    color: inherit
+
+}
+/* Used to change letter colorization on animation */
+@keyframes siteTitleAnimation{
+     0%{
+         color: #e7e7e7;
+     }
+     50%{
+         color: #818181;
+     }
+     100%{
+         color: #e7e7e7;
+     }
+}
+/* Used to change back to 0% for continued usage */
+@keyframes emptyAnim{}
+
+/* Sets up Animation */
+#site-title a span{
+     animation: emptyAnim;
+}
+
+/* Choice in animation and how long */
+#site-title a:hover span{
+     animation: 0.3s ease-in-out alternate siteTitleAnimation;
+}
+
+/* Used to set animation across Letters */
+#site-title a span:nth-child(2){
+     animation-delay: 0.025s;
+}
+#site-title a span:nth-child(3){
+     animation-delay: 0.05s;
+}
+#site-title a span:nth-child(4){
+     animation-delay: 0.075s;
+}
+#site-title a span:nth-child(5){
+    animation-delay: 0.1025s;
+}
+#site-title a span:nth-child(6){
+    animation-delay: 0.105s;
+}
+#site-title a span:nth-child(7){
+    animation-delay: 0.1075s;
+}
+#site-title a span:nth-child(8){
+    animation-delay: 0.2s;
+}
